@@ -1,0 +1,2314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>935</width>
+    <height>703</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">/* QGroupBox 的整体样式 */
+QGroupBox {
+    background-color: #F5F5F5;
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    margin-top: 20px; /* 控制标题距离上方的间距 */
+    padding: 0px; /* 内部留出空间 */
+}
+/* 标题的样式，设置在左上角 */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* 将标题对齐到左上角 */
+    padding: 0 8px; /* 调整标题的内边距 */
+    color: #37474F;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent; /* 可选，设置为透明以便更好地融入背景 */
+}
+
+/* 鼠标悬停时的边框颜色 */
+QGroupBox:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* QGroupBox 内部 QTableWidget 的样式 */
+QGroupBox QTableWidget {
+    border: 1px solid #B0BEC5;
+    background-color: #FAFAFA;
+    gridline-color: #CFD8DC;
+    font-size: 14px;
+    color: #37474F;
+}
+
+/* QTableWidget 的交替行颜色 */
+QGroupBox QTableWidget::item {
+    background-color: #FFFFFF;
+}
+
+QGroupBox QTableWidget::item:alternate {
+    background-color: #F5F5F5;
+}
+
+/* 鼠标悬停效果 */
+QGroupBox QTableWidget::item:hover {
+    background-color: #E8F5E9;
+}
+
+/* 选中行的样式 */
+QGroupBox QTableWidget::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头样式 */
+QGroupBox QHeaderView::section {
+    background-color: #ECEFF1;
+    padding: 8px;
+    font-weight: bold;
+    color: #607D8B;
+    border: none;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+/* 设置垂直滚动条的样式 */
+QGroupBox QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0;
+    width: 8px;
+    margin: 22px 0 22px 0;
+}
+
+QGroupBox QScrollBar::handle:vertical {
+    background: #4CAF50;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+/* 隐藏滚动条的上下线 */
+QGroupBox QScrollBar::add-line:vertical, QGroupBox QScrollBar::sub-line:vertical {
+    height: 0px;
+    width: 0px;
+    subcontrol-origin: margin;
+}
+
+QGroupBox QScrollBar::add-page:vertical, QGroupBox QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+      </property>
+      <property name="title">
+       <string>选项</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #4CAF50; /* 默认背景色 */
+    border: 2px solid transparent; /* 默认边框透明 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    transition: all 0.2s; /* 添加过渡效果，但不是所有 Qt 版本都支持 */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* 悬停时背景色 */
+    border: 2px solid #ffffff; /* 悬停时边框颜色 */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>项目一</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #4CAF50; /* 默认背景色 */
+    border: 2px solid transparent; /* 默认边框透明 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    transition: all 0.2s; /* 添加过渡效果，但不是所有 Qt 版本都支持 */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* 悬停时背景色 */
+    border: 2px solid #ffffff; /* 悬停时边框颜色 */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>项目二</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #4CAF50; /* 默认背景色 */
+    border: 2px solid transparent; /* 默认边框透明 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    transition: all 0.2s; /* 添加过渡效果，但不是所有 Qt 版本都支持 */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* 悬停时背景色 */
+    border: 2px solid #ffffff; /* 悬停时边框颜色 */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>项目三</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_17">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #4CAF50; /* 默认背景色 */
+    border: 2px solid transparent; /* 默认边框透明 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    transition: all 0.2s; /* 添加过渡效果，但不是所有 Qt 版本都支持 */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* 悬停时背景色 */
+    border: 2px solid #ffffff; /* 悬停时边框颜色 */
+}</string>
+         </property>
+         <property name="text">
+          <string>项目四</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_16">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #4CAF50; /* 默认背景色 */
+    border: 2px solid transparent; /* 默认边框透明 */
+    color: white; /* 字体颜色 */
+    padding: 10px 20px; /* 内边距 */
+    transition: all 0.2s; /* 添加过渡效果，但不是所有 Qt 版本都支持 */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* 悬停时背景色 */
+    border: 2px solid #ffffff; /* 悬停时边框颜色 */
+}
+</string>
+         </property>
+         <property name="text">
+          <string>项目五</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">/* QGroupBox 的整体样式 */
+QGroupBox {
+    background-color: #F5F5F5;
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    margin-top: 20px; /* 控制标题距离上方的间距 */
+    padding: 0px; /* 内部留出空间 */
+}
+/* 标题的样式，设置在左上角 */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* 将标题对齐到左上角 */
+    padding: 0 8px; /* 调整标题的内边距 */
+    color: #37474F;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent; /* 可选，设置为透明以便更好地融入背景 */
+}
+
+/* 鼠标悬停时的边框颜色 */
+QGroupBox:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* QGroupBox 内部 QTableWidget 的样式 */
+QGroupBox QTableWidget {
+    border: 1px solid #B0BEC5;
+    background-color: #FAFAFA;
+    gridline-color: #CFD8DC;
+    font-size: 14px;
+    color: #37474F;
+}
+
+/* QTableWidget 的交替行颜色 */
+QGroupBox QTableWidget::item {
+    background-color: #FFFFFF;
+}
+
+QGroupBox QTableWidget::item:alternate {
+    background-color: #F5F5F5;
+}
+
+/* 鼠标悬停效果 */
+QGroupBox QTableWidget::item:hover {
+    background-color: #E8F5E9;
+}
+
+/* 选中行的样式 */
+QGroupBox QTableWidget::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头样式 */
+QGroupBox QHeaderView::section {
+    background-color: #ECEFF1;
+    padding: 8px;
+    font-weight: bold;
+    color: #607D8B;
+    border: none;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+/* 设置垂直滚动条的样式 */
+QGroupBox QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0;
+    width: 8px;
+    margin: 22px 0 22px 0;
+}
+
+QGroupBox QScrollBar::handle:vertical {
+    background: #4CAF50;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+/* 隐藏滚动条的上下线 */
+QGroupBox QScrollBar::add-line:vertical, QGroupBox QScrollBar::sub-line:vertical {
+    height: 0px;
+    width: 0px;
+    subcontrol-origin: margin;
+}
+
+QGroupBox QScrollBar::add-page:vertical, QGroupBox QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+          </property>
+          <property name="title">
+           <string>内容</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="7" column="0" rowspan="3">
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="title">
+              <string>信源熵</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="3" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_6">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>计算信源熵</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="styleSheet">
+                 <string notr="true">/* QLabel 基本样式 */
+QLabel {
+    background-color: #F5F5F5;
+    color: #37474F;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #B0BEC5;
+    border-radius: 6px;
+}
+
+/* 鼠标悬停效果 */
+QLabel:hover {
+    background-color: #E0F7FA;
+    color: #00796B;
+    border: 1px solid #4CAF50;
+}
+
+/* 用于显示标题时的 QLabel 样式 */
+QLabel[role=&quot;title&quot;] {
+    background-color: transparent;
+    color: #37474F;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+
+/* 用于显示错误信息时的 QLabel 样式 */
+QLabel[role=&quot;error&quot;] {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #D32F2F;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>结果</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_2">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QRadioButton" name="radioButton">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>比特</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QRadioButton" name="radioButton_2">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>哈特莱</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="11" column="2">
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="6" column="2">
+            <widget class="QPushButton" name="pro1_init_source">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+             </property>
+             <property name="text">
+              <string>初始化信源</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QPushButton" name="pro1_add_line">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+             </property>
+             <property name="text">
+              <string>添加行</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="12">
+            <widget class="QTableWidget" name="pro1_source_list">
+             <property name="styleSheet">
+              <string notr="true">/* 表格的整体样式 */
+QTableWidget {
+    border: 1px solid #B0BEC5;
+    background-color: #FAFAFA;
+    gridline-color: #CFD8DC;
+    font-size: 14px;
+    color: #37474F;
+}
+
+/* 设置交替行的背景颜色 */
+QTableWidget::item {
+    background-color: #FFFFFF;
+}
+
+QTableWidget::item:alternate {
+    background-color: #F5F5F5;
+}
+
+/* 鼠标悬停效果 */
+QTableWidget::item:hover {
+    background-color: #E8F5E9;
+}
+
+/* 选中行的样式 */
+QTableWidget::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头样式 */
+QHeaderView::section {
+    background-color: #ECEFF1;
+    padding: 8px;
+    font-weight: bold;
+    color: #607D8B;
+    border: none;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+/* 设置垂直滚动条的样式 */
+QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0;
+    width: 8px;
+    margin: 22px 0 22px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #4CAF50;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    width: 0px;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+             </property>
+             <column>
+              <property name="text">
+               <string>符号列表</string>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>概率列表</string>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>采样</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="styleSheet">
+                 <string notr="true">/* QLabel 基本样式 */
+QLabel {
+    background-color: #F5F5F5;
+    color: #37474F;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #B0BEC5;
+    border-radius: 6px;
+}
+
+/* 鼠标悬停效果 */
+QLabel:hover {
+    background-color: #E0F7FA;
+    color: #00796B;
+    border: 1px solid #4CAF50;
+}
+
+/* 用于显示标题时的 QLabel 样式 */
+QLabel[role=&quot;title&quot;] {
+    background-color: transparent;
+    color: #37474F;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+
+/* 用于显示错误信息时的 QLabel 样式 */
+QLabel[role=&quot;error&quot;] {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #D32F2F;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>采样结果</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_5">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>采样</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="10" column="0" rowspan="2">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="10" column="2">
+            <widget class="QLabel" name="label">
+             <property name="styleSheet">
+              <string notr="true">/* QLabel 基本样式 */
+QLabel {
+    background-color: #F5F5F5;
+    color: #37474F;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #B0BEC5;
+    border-radius: 6px;
+}
+
+/* 鼠标悬停效果 */
+QLabel:hover {
+    background-color: #E0F7FA;
+    color: #00796B;
+    border: 1px solid #4CAF50;
+}
+
+/* 用于显示标题时的 QLabel 样式 */
+QLabel[role=&quot;title&quot;] {
+    background-color: transparent;
+    color: #37474F;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+
+/* 用于显示错误信息时的 QLabel 样式 */
+QLabel[role=&quot;error&quot;] {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #D32F2F;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>未保存</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QPushButton" name="pro1_delete_line">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+             </property>
+             <property name="text">
+              <string>删除行</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QLabel" name="pro1_tips_1">
+             <property name="styleSheet">
+              <string notr="true">/* QLabel 基本样式 */
+QLabel {
+    background-color: #F5F5F5;
+    color: #37474F;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #B0BEC5;
+    border-radius: 6px;
+}
+
+/* 鼠标悬停效果 */
+QLabel:hover {
+    background-color: #E0F7FA;
+    color: #00796B;
+    border: 1px solid #4CAF50;
+}
+
+/* 用于显示标题时的 QLabel 样式 */
+QLabel[role=&quot;title&quot;] {
+    background-color: transparent;
+    color: #37474F;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+
+/* 用于显示错误信息时的 QLabel 样式 */
+QLabel[role=&quot;error&quot;] {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #D32F2F;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>等待初始化</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="styleSheet">
+           <string notr="true">/* QGroupBox 的整体样式 */
+QGroupBox {
+    background-color: #F5F5F5;
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    margin-top: 20px; /* 控制标题距离上方的间距 */
+    padding: 0px; /* 内部留出空间 */
+}
+/* 标题的样式，设置在左上角 */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* 将标题对齐到左上角 */
+    padding: 0 8px; /* 调整标题的内边距 */
+    color: #37474F;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent; /* 可选，设置为透明以便更好地融入背景 */
+}
+
+/* 鼠标悬停时的边框颜色 */
+QGroupBox:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* QGroupBox 内部 QTableWidget 的样式 */
+QGroupBox QTableWidget {
+    border: 1px solid #B0BEC5;
+    background-color: #FAFAFA;
+    gridline-color: #CFD8DC;
+    font-size: 14px;
+    color: #37474F;
+}
+
+/* QTableWidget 的交替行颜色 */
+QGroupBox QTableWidget::item {
+    background-color: #FFFFFF;
+}
+
+QGroupBox QTableWidget::item:alternate {
+    background-color: #F5F5F5;
+}
+
+/* 鼠标悬停效果 */
+QGroupBox QTableWidget::item:hover {
+    background-color: #E8F5E9;
+}
+
+/* 选中行的样式 */
+QGroupBox QTableWidget::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头样式 */
+QGroupBox QHeaderView::section {
+    background-color: #ECEFF1;
+    padding: 8px;
+    font-weight: bold;
+    color: #607D8B;
+    border: none;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+/* 设置垂直滚动条的样式 */
+QGroupBox QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0;
+    width: 8px;
+    margin: 22px 0 22px 0;
+}
+
+QGroupBox QScrollBar::handle:vertical {
+    background: #4CAF50;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+/* 隐藏滚动条的上下线 */
+QGroupBox QScrollBar::add-line:vertical, QGroupBox QScrollBar::sub-line:vertical {
+    height: 0px;
+    width: 0px;
+    subcontrol-origin: margin;
+}
+
+QGroupBox QScrollBar::add-page:vertical, QGroupBox QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+          </property>
+          <property name="title">
+           <string>内容</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9" columnstretch="3,3,3,3">
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="title">
+              <string>采样</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_9">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>采样信源</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>采样1：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_4">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>采样2：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="lineEdit_5">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+             </property>
+             <property name="text">
+              <string>初始化联合信源</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QGroupBox" name="groupBox_9">
+             <property name="title">
+              <string>计算熵</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0" colspan="3">
+               <widget class="QPushButton" name="pushButton_10">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>计算联合熵</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>联合熵：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1" colspan="2">
+               <widget class="QLineEdit" name="lineEdit_6">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="3">
+               <widget class="QPushButton" name="pushButton_11">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>计算条件熵</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
+               <widget class="QLabel" name="label_10">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="text">
+                 <string>条件熵：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLineEdit" name="lineEdit_7">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0" colspan="3">
+               <widget class="QRadioButton" name="radioButton_3">
+                <property name="text">
+                 <string>比特</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0" colspan="3">
+               <widget class="QRadioButton" name="radioButton_4">
+                <property name="text">
+                 <string>哈特莱</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="title">
+              <string>调整</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>信源1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_12">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>添加行</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pushButton_13">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>删除行</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>信源2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pushButton_14">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>添加行</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="pushButton_15">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>删除行</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="4">
+            <widget class="QWidget" name="widget" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>信源2：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget_3">
+                <column>
+                 <property name="text">
+                  <string>符号列表</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>概率列表</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="4">
+            <widget class="QWidget" name="widget_2" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>信源1：</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget_2">
+                <column>
+                 <property name="text">
+                  <string>符号列表</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>9</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>概率列表</string>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3" rowspan="4">
+            <widget class="QPlainTextEdit" name="plainTextEdit_2"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <layout class="QGridLayout" name="gridLayout_14">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_12">
+          <property name="styleSheet">
+           <string notr="true">/* QGroupBox 的整体样式 */
+QGroupBox {
+    background-color: #F5F5F5;
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    margin-top: 20px; /* 控制标题距离上方的间距 */
+    padding: 0px; /* 内部留出空间 */
+}
+/* 标题的样式，设置在左上角 */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* 将标题对齐到左上角 */
+    padding: 0 8px; /* 调整标题的内边距 */
+    color: #37474F;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent; /* 可选，设置为透明以便更好地融入背景 */
+}
+
+/* 鼠标悬停时的边框颜色 */
+QGroupBox:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* QGroupBox 内部 QTableWidget 的样式 */
+QGroupBox QTableWidget {
+    border: 1px solid #B0BEC5;
+    background-color: #FAFAFA;
+    gridline-color: #CFD8DC;
+    font-size: 14px;
+    color: #37474F;
+}
+
+/* QTableWidget 的交替行颜色 */
+QGroupBox QTableWidget::item {
+    background-color: #FFFFFF;
+}
+
+QGroupBox QTableWidget::item:alternate {
+    background-color: #F5F5F5;
+}
+
+/* 鼠标悬停效果 */
+QGroupBox QTableWidget::item:hover {
+    background-color: #E8F5E9;
+}
+
+/* 选中行的样式 */
+QGroupBox QTableWidget::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头样式 */
+QGroupBox QHeaderView::section {
+    background-color: #ECEFF1;
+    padding: 8px;
+    font-weight: bold;
+    color: #607D8B;
+    border: none;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+/* 设置垂直滚动条的样式 */
+QGroupBox QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0;
+    width: 8px;
+    margin: 22px 0 22px 0;
+}
+
+QGroupBox QScrollBar::handle:vertical {
+    background: #4CAF50;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+/* 隐藏滚动条的上下线 */
+QGroupBox QScrollBar::add-line:vertical, QGroupBox QScrollBar::sub-line:vertical {
+    height: 0px;
+    width: 0px;
+    subcontrol-origin: margin;
+}
+
+QGroupBox QScrollBar::add-page:vertical, QGroupBox QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+          </property>
+          <property name="title">
+           <string>编码方式判断</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_21">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_6" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QGroupBox" name="groupBox_14">
+                <property name="title">
+                 <string>判断编码</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QCheckBox" name="checkBox">
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox {
+    font-size: 14px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #388E3C;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50;
+    border-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff;
+    border-color: #388E3C;
+}
+
+QCheckBox:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox:pressed {
+    background-color: #388E3C;
+    border-color: #2C6B33;
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: #66BB6A;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>定长编码/变长编码</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_2">
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox {
+    font-size: 14px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #388E3C;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50;
+    border-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff;
+    border-color: #388E3C;
+}
+
+QCheckBox:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox:pressed {
+    background-color: #388E3C;
+    border-color: #2C6B33;
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: #66BB6A;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>非奇异码/奇异码</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_3">
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox {
+    font-size: 14px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #388E3C;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50;
+    border-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff;
+    border-color: #388E3C;
+}
+
+QCheckBox:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox:pressed {
+    background-color: #388E3C;
+    border-color: #2C6B33;
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: #66BB6A;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>唯一可译码</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_4">
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox {
+    font-size: 14px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #388E3C;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50;
+    border-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff;
+    border-color: #388E3C;
+}
+
+QCheckBox:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox:pressed {
+    background-color: #388E3C;
+    border-color: #2C6B33;
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #66BB6A;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: #66BB6A;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>即时码/非即时码</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_21">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>初始化map容器</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_22">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>添加行</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_23">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>删除行</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="3">
+            <widget class="QTableWidget" name="tableWidget_4">
+             <column>
+              <property name="text">
+               <string>符号列表</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>编码</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPlainTextEdit" name="plainTextEdit_5"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_5">
+       <layout class="QGridLayout" name="gridLayout_16">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_13">
+          <property name="title">
+           <string>编码</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_8" native="true">
+             <layout class="QGridLayout" name="gridLayout_15">
+              <item row="3" column="0" colspan="2">
+               <widget class="QWidget" name="widget_7" native="true">
+                <layout class="QGridLayout" name="gridLayout_18">
+                 <item row="0" column="0">
+                  <widget class="QPushButton" name="pushButton_20">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>计算信源编码效率</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="0" rowspan="2" colspan="2">
+               <widget class="QWidget" name="widget_3" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <item>
+                  <widget class="QWidget" name="widget_4" native="true">
+                   <layout class="QGridLayout" name="gridLayout_17">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_14">
+                      <property name="text">
+                       <string>输入符号集合</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_5" native="true">
+                   <layout class="QGridLayout" name="gridLayout_19">
+                    <item row="0" column="0">
+                     <widget class="QPlainTextEdit" name="plainTextEdit_3"/>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QPushButton" name="pushButton_18">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>转化为</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <widget class="QComboBox" name="comboBox">
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border: 1px solid #388E3C;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+
+</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>哈夫曼编码</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QWidget" name="widget_9" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_19">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>信源转化为</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_2">
+                   <property name="styleSheet">
+                    <string notr="true">QComboBox {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border: 1px solid #388E3C;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+
+</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>哈夫曼编码</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPlainTextEdit" name="plainTextEdit_4"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="styleSheet">
+           <string notr="true">/* QGroupBox 的整体样式 */
+QGroupBox {
+    background-color: #F5F5F5;
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    margin-top: 20px; /* 控制标题距离上方的间距 */
+    padding: 0px; /* 内部留出空间 */
+}
+/* 标题的样式，设置在左上角 */
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left; /* 将标题对齐到左上角 */
+    padding: 0 8px; /* 调整标题的内边距 */
+    color: #37474F;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent; /* 可选，设置为透明以便更好地融入背景 */
+}
+
+/* 鼠标悬停时的边框颜色 */
+QGroupBox:hover {
+    border: 2px solid #4CAF50;
+}
+
+/* QGroupBox 内部 QTableWidget 的样式 */
+QGroupBox QTableWidget {
+    border: 1px solid #B0BEC5;
+    background-color: #FAFAFA;
+    gridline-color: #CFD8DC;
+    font-size: 14px;
+    color: #37474F;
+}
+
+/* QTableWidget 的交替行颜色 */
+QGroupBox QTableWidget::item {
+    background-color: #FFFFFF;
+}
+
+QGroupBox QTableWidget::item:alternate {
+    background-color: #F5F5F5;
+}
+
+/* 鼠标悬停效果 */
+QGroupBox QTableWidget::item:hover {
+    background-color: #E8F5E9;
+}
+
+/* 选中行的样式 */
+QGroupBox QTableWidget::item:selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 表头样式 */
+QGroupBox QHeaderView::section {
+    background-color: #ECEFF1;
+    padding: 8px;
+    font-weight: bold;
+    color: #607D8B;
+    border: none;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+/* 设置垂直滚动条的样式 */
+QGroupBox QScrollBar:vertical {
+    border: none;
+    background: #E0E0E0;
+    width: 8px;
+    margin: 22px 0 22px 0;
+}
+
+QGroupBox QScrollBar::handle:vertical {
+    background: #4CAF50;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+/* 隐藏滚动条的上下线 */
+QGroupBox QScrollBar::add-line:vertical, QGroupBox QScrollBar::sub-line:vertical {
+    height: 0px;
+    width: 0px;
+    subcontrol-origin: margin;
+}
+
+QGroupBox QScrollBar::add-page:vertical, QGroupBox QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+          </property>
+          <property name="title">
+           <string>内容</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6" columnstretch="1,1" rowminimumheight="0,0" columnminimumwidth="0,0">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>操作</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="styleSheet">
+                 <string notr="true">/* QLabel 基本样式 */
+QLabel {
+    background-color: #F5F5F5;
+    color: #37474F;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #B0BEC5;
+    border-radius: 6px;
+}
+
+/* 鼠标悬停效果 */
+QLabel:hover {
+    background-color: #E0F7FA;
+    color: #00796B;
+    border: 1px solid #4CAF50;
+}
+
+/* 用于显示标题时的 QLabel 样式 */
+QLabel[role=&quot;title&quot;] {
+    background-color: transparent;
+    color: #37474F;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    border: none;
+}
+
+/* 用于显示错误信息时的 QLabel 样式 */
+QLabel[role=&quot;error&quot;] {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #D32F2F;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>信源熵：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_4">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>返回信源熵</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_7">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #4CAF50, stop:1 #81C784);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #388E3C;
+}</string>
+                </property>
+                <property name="text">
+                 <string>返回信源列表</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
+               <widget class="QLineEdit" name="lineEdit_3">
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid #B0BEC5;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: #37474F;
+    background-color: #ECEFF1;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #FFFFFF;
+}
+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1" rowspan="2">
+            <widget class="QTableWidget" name="tableWidget">
+             <column>
+              <property name="text">
+               <string>符号列表</string>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>符号列表</string>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="title">
+              <string>输出内容</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_7">
+              <item row="0" column="0">
+               <widget class="QPlainTextEdit" name="plainTextEdit"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>935</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_output_ifo"/>
+    <addaction name="action_input_ifo"/>
+    <addaction name="separator"/>
+    <addaction name="action_output_uni"/>
+    <addaction name="action_input_uni"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_output_ifo">
+   <property name="text">
+    <string>导出信源</string>
+   </property>
+  </action>
+  <action name="action_input_ifo">
+   <property name="text">
+    <string>导入信源</string>
+   </property>
+  </action>
+  <action name="action_output_uni">
+   <property name="text">
+    <string>导出联合信源</string>
+   </property>
+  </action>
+  <action name="action_input_uni">
+   <property name="text">
+    <string>导入联合信源</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
